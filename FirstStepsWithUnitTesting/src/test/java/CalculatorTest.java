@@ -37,4 +37,16 @@ class CalculatorTest {
         assertEquals(2, result);
     }
 
+    @Test
+    public void minusTwoPlusMinusSevenShouldBeMinusNine() {
+        int result = calculator.add(-2, -7);
+        assertEquals(-9, result);
+    }
+
+    @Test
+    public void addingLargeNumbersShouldBeCorrect() {
+        int result = calculator.add(2456, 2544);
+        assertEquals(5000, result);
+    }
+
 }
