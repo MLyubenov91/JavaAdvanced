@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 class CalculatorTest {
@@ -68,33 +69,64 @@ class CalculatorTest {
     }
 
     @Test
-    public void TenMinusZeroShouldBeTen() {
+    public void tenMinusZeroShouldBeTen() {
         int result = calculator.subtract(10, 0);
         assertEquals(10, result);
     }
 
     @Test
-    public void TwoMultiplyByTwoShouldBeFour() {
+    public void twoMultiplyByTwoShouldBeFour() {
         int result = calculator.multiply(2, 2);
         assertEquals(4, result);
     }
 
     @Test
-    public void TwoMultiplyByZeroShouldBeZero() {
+    public void twoMultiplyByZeroShouldBeZero() {
         int result = calculator.multiply(2, 0);
         assertEquals(0, result);
     }
 
     @Test
-    public void TwoMultiplyByNegativeTwoShouldBeNegativeFour() {
+    public void twoMultiplyByNegativeTwoShouldBeNegativeFour() {
         int result = calculator.multiply(2, -2);
         assertEquals(-4, result);
     }
 
     @Test
-    public void NegativeTwoMultiplyByNegativeTwoShouldBeFour() {
+    public void negativeTwoMultiplyByNegativeTwoShouldBeFour() {
         int result = calculator.multiply(-2, -2);
         assertEquals(4, result);
     }
 
+    @Test
+    public void tenDividedByTwoShouldBeFive() {
+        int result = calculator.divide(10, 2);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void negativeTenDividedByTwoShouldBeNegativeFive() {
+        int result = calculator.divide(-10, 2);
+        assertEquals(-5, result);
+    }
+
+    @Test
+    public void negativeTenDividedByNegativeTwoShouldBeFive() {
+        int result = calculator.divide(-10, -2);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void tenDividedByThreeShouldBeThree() {
+        int result = calculator.divide(10, 3);
+        assertEquals(3, result);
+    }
+
+    @Test
+    public void tenDividedByZeroShouldThrowException() {
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    calculator.divide(10, 0);
+                });
+    }
 }
