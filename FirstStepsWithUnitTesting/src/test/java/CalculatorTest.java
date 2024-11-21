@@ -26,7 +26,7 @@ class CalculatorTest {
     }
 
     @Test
-    public void twoPlusMinusFiveShouldBeMinusThree() {
+    public void twoPlusNegativeFiveShouldBeNegativeThree() {
         int result = calculator.add(2, -5);
         assertEquals(-3, result);
     }
@@ -38,7 +38,7 @@ class CalculatorTest {
     }
 
     @Test
-    public void minusTwoPlusMinusSevenShouldBeMinusNine() {
+    public void negativeTwoPlusNegativeSevenShouldBeNegativeNine() {
         int result = calculator.add(-2, -7);
         assertEquals(-9, result);
     }
@@ -47,6 +47,30 @@ class CalculatorTest {
     public void addingLargeNumbersShouldBeCorrect() {
         int result = calculator.add(2456, 2544);
         assertEquals(5000, result);
+    }
+
+    @Test
+    public void tenMinusFiveShouldBeFive() {
+        int result = calculator.subtract(10, 5);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void negativeTenMinusNegativeFiveShouldBeNegativeFive() {
+        int result = calculator.subtract(-10, -5);
+        assertEquals(-5, result);
+    }
+
+    @Test
+    public void negativeTenMinusFiveShouldBeNegativeFifteen() {
+        int result = calculator.subtract(-10, 5);
+        assertEquals(-15, result);
+    }
+
+    @Test
+    public void TenMinusZeroShouldBeTen() {
+        int result = calculator.subtract(10, 0);
+        assertEquals(10, result);
     }
 
 }

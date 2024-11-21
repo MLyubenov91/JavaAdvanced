@@ -11,9 +11,9 @@ public class Calculator {
         return a * b;
     }
 
-    public int divide (int a, int b) throws Exception {
+    public int divide (int a, int b) {
         if (b == 0) {
-            throw new Exception("Division by zero");
+            throw new IllegalArgumentException("Cannot divide by zero");
         }
 
         return a / b;
