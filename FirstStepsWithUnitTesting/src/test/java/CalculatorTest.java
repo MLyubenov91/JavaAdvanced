@@ -73,4 +73,28 @@ class CalculatorTest {
         assertEquals(10, result);
     }
 
+    @Test
+    public void TwoMultiplyByTwoShouldBeFour() {
+        int result = calculator.multiply(2, 2);
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void TwoMultiplyByZeroShouldBeZero() {
+        int result = calculator.multiply(2, 0);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void TwoMultiplyByNegativeTwoShouldBeNegativeFour() {
+        int result = calculator.multiply(2, -2);
+        assertEquals(-4, result);
+    }
+
+    @Test
+    public void NegativeTwoMultiplyByNegativeTwoShouldBeFour() {
+        int result = calculator.multiply(-2, -2);
+        assertEquals(4, result);
+    }
+
 }
