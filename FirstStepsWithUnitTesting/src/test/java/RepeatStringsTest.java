@@ -32,4 +32,11 @@ class RepeatStringsTest {
         var result = repeater.repeat(input);
         assertEquals("ac", result);
     }
+
+    @Test
+    public void whiteSpaceStringShouldBeRepeated() {
+        String[] input = {"a", "  ", "c"};
+        var result = repeater.repeat(input);
+        assertEquals("a    c", result);
+    }
 }
