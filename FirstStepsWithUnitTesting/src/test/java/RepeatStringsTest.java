@@ -39,4 +39,11 @@ class RepeatStringsTest {
         var result = repeater.repeat(input);
         assertEquals("a    c", result);
     }
+
+    @Test
+    public void emptyInputShouldReturnEmptyString() {
+        String[] input = {};
+        var result = repeater.repeat(input);
+        assertEquals("", result);
+    }
 }
