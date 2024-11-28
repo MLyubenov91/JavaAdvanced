@@ -3,6 +3,10 @@ public class Substring {
 
         input = input.replace(toRemove, "");
 
+        while (input.contains("  ")) {
+            input = input.replace("  ", " ");
+        }
+
         return input.trim();
     }
 }
