@@ -32,4 +32,11 @@ class ReverseAndConcatenateTest {
         assertEquals("", result);
     }
 
+    @Test
+    public void Test_WhiteSpaceInput_ReturnsConcatenatedString() {
+        String[] input = {"Test", " ", "Simple"};
+        String result = ReverseAndConcatenate.ReverseAndConcatenateStrings(input);
+        assertEquals("Simple Test", result);
+    }
+
 }
