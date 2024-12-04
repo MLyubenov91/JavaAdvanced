@@ -18,4 +18,11 @@ class ReverseAndConcatenateTest {
         assertEquals("test", result);
     }
 
+    @Test
+    public void Test_MultipleString_ReturnsReversedConcatenatedString() {
+        String[] input = {"Test", "Simple", "One"};
+        String result = ReverseAndConcatenate.ReverseAndConcatenateStrings(input);
+        assertEquals("OneSimpleTest", result);
+    }
+
 }
