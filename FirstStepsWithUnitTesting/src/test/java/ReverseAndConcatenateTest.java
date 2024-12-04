@@ -39,4 +39,11 @@ class ReverseAndConcatenateTest {
         assertEquals("Simple Test", result);
     }
 
+    @Test
+    public void Test_LargeInput_ReturnsReversedConcatenatedString() {
+        String[] input = {"Pernik", "From", "Martin", "Am", "I"};
+        String result = ReverseAndConcatenate.ReverseAndConcatenateStrings(input);
+        assertEquals("IAmMartinFromPernik", result);
+    }
+
 }
