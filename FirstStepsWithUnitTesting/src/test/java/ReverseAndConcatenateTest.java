@@ -11,4 +11,11 @@ class ReverseAndConcatenateTest {
         assertEquals("", result);
     }
 
+    @Test
+    public void Test_SingleString_ReturnsSameString() {
+        String[] input = {"test"};
+        String result = ReverseAndConcatenate.ReverseAndConcatenateStrings(input);
+        assertEquals("test", result);
+    }
+
 }
