@@ -25,4 +25,11 @@ class ReverseAndConcatenateTest {
         assertEquals("OneSimpleTest", result);
     }
 
+    @Test
+    public void Test_NullInput_ReturnsEmptyString() {
+        String[] input = null;
+        String result = ReverseAndConcatenate.ReverseAndConcatenateStrings(input);
+        assertEquals("", result);
+    }
+
 }
