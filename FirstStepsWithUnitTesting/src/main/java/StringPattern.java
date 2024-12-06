@@ -1,6 +1,4 @@
-import java.util.Objects;
-
-public class Pattern {
+public class StringPattern {
     public static String GeneratePatternedString(String input, int repetitionFactor) {
         if (input.isEmpty() || input == null || repetitionFactor <= 0) {
             throw new IllegalArgumentException("Input string cannot be empty and repetition factor must be positive");
