@@ -14,4 +14,9 @@ class StringPatternTest {
         assertThrows(IllegalArgumentException.class, () -> StringPattern.GeneratePatternedString("hello", -3));
     }
 
+    @Test
+    public void Test_GeneratePatternedString_ZeroRepetitionFactor_ThrowsArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> StringPattern.GeneratePatternedString("hello", 0));
+    }
+
 }
