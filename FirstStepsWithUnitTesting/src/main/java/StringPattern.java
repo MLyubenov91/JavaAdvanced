@@ -8,6 +8,7 @@ public class StringPattern {
         for (int i = 0; i < repetitionFactor; i++) {
             for (int j = 0; j < input.length(); j++) {
                 char currentChar = j % 2 == 0 ? Character.toLowerCase(input.charAt(j)) : Character.toUpperCase(input.charAt(j));
+                result.append(currentChar);
             }
         }
 
