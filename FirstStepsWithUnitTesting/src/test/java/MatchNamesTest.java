@@ -17,4 +17,11 @@ class MatchNamesTest {
         String result = MatchNames.Match(input);
         assertEquals("", result);
     }
+
+    @Test
+    public void Test_Match_EmptyInput_ReturnsEmptyString() {
+        String input = "";
+        String result = MatchNames.Match(input);
+        assertEquals("", result);
+    }
 }
