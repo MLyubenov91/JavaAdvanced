@@ -12,6 +12,13 @@ class MatchNamesTest {
     }
 
     @Test
+    public void Test_Match_OnlyOneValidName_ReturnsMatchedName() {
+        String input = "John Doe lives on James johnson blvd.";
+        String result = MatchNames.Match(input);
+        assertEquals("John Doe", result);
+    }
+
+    @Test
     public void Test_Match_NoValidNames_ReturnsEmptyString() {
         String input = "john Doe lives on James johnson blvd.";
         String result = MatchNames.Match(input);
