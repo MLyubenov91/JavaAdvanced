@@ -11,4 +11,11 @@ class MatchPhoneNumbersTest {
         assertEquals("+359-2-123-4567, +359 2 456 7890", result);
     }
 
+    @Test
+    public void Test_Match_NoValidPhoneNumbers_ReturnsEmptyString() {
+        String input = "+359-2-1234 567 test test +359/2/456/7890";
+        String result = MatchPhoneNumbers.Match(input);
+        assertEquals("", result);
+    }
+
 }
