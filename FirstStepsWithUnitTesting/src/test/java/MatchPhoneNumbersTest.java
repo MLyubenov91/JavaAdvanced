@@ -18,4 +18,11 @@ class MatchPhoneNumbersTest {
         assertEquals("", result);
     }
 
+    @Test
+    public void Test_Match_EmptyInput_ReturnsEmptyString() {
+        String input = "";
+        String result = MatchPhoneNumbers.Match(input);
+        assertEquals("", result);
+    }
+
 }
