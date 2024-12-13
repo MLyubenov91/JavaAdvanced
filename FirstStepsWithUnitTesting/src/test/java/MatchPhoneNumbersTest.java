@@ -25,4 +25,11 @@ class MatchPhoneNumbersTest {
         assertEquals("", result);
     }
 
+    @Test
+    public void Test_Match_MixedValidAndInvalidNumbers_ReturnsOnlyValidNumbers() {
+        String input = "+359-2-123-4567 +359 2 456 7890 +359-2-1234 567 +359/2/456/7890";
+        String result = MatchPhoneNumbers.Match(input);
+        assertEquals("+359-2-123-4567, +359 2 456 7890", result);
+    }
+
 }
