@@ -25,4 +25,11 @@ class MatchDatesTest {
         assertEquals("", result);
     }
 
+    @Test
+    public void Test_Match_EmptyStringInput_ReturnsEmptyString(){
+        String input = "";
+        String result = MatchDates.Match(input);
+        assertEquals("", result);
+    }
+
 }
