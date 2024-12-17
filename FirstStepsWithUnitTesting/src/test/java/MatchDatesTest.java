@@ -18,4 +18,11 @@ class MatchDatesTest {
         assertEquals("Day: 11, Month: April, Year: 1970\nDay: 31, Month: December, Year: 1991", result);
     }
 
+    @Test
+    public void Test_Match_NoMatch_ReturnsEmptyString(){
+        String input = "11-April 1970 31.12.1991";
+        String result = MatchDates.Match(input);
+        assertEquals("", result);
+    }
+
 }
