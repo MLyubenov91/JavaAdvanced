@@ -32,4 +32,12 @@ class MatchDatesTest {
         assertEquals("", result);
     }
 
+    @Test
+    public void Test_Match_NullInput_ThrowsIllegalArgumentException(){
+        String input = null;
+        assertThrows(IllegalArgumentException.class, () -> MatchDates.Match(input));
+    }
+
+
+
 }
