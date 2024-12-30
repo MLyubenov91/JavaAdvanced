@@ -32,4 +32,13 @@ class MatchURLsTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    public void Test_ExtractUrls_MultipleUrlInText_ReturnsAllUrls() {
+        String text = "https://www.softuni.bg, https://www.github.com, https://www.google.com";
+        List<String> expected = List.of("https://www.softuni.bg", "https://www.github.com", "https://www.google.com");
+        List<String> result = MatchURLs.ExtractUrls(text);
+        assertEquals(result.size(), 3);
+        assertEquals(expected, result);
+    }
+
 }
