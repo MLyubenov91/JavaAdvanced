@@ -13,4 +13,11 @@ class MatchURLsTest {
         assertTrue(result.isEmpty());
     }
 
+    @Test
+    public void Test_ExtractUrls_NoUrlsInText_ReturnsEmptyList() {
+        String text = "hello world";
+        List<String> result = MatchURLs.ExtractUrls(text);
+        assertTrue(result.isEmpty());
+    }
+
 }
