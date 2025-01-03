@@ -10,4 +10,11 @@ class EmailValidatorTest {
         boolean result = EmailValidator.isValid(email);
         assertTrue(result);
     }
+
+    @Test
+    public void Test_InvalidEmail_ReturnsFalse() {
+        String email = "some.info@soft@uni.bg";
+        boolean result = EmailValidator.isValid(email);
+        assertFalse(result);
+    }
 }
